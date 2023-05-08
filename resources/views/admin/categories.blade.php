@@ -82,7 +82,7 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('index1') }}" method="get">
+                    <form action="{{ route('index') }}" method="get">
                         <div class="">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">اسم القسم</label>
@@ -118,7 +118,7 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('index1') }}" method="get">
+                    <form action="{{ route('index') }}" method="get">
                         <div class="">
                             <div class="form-group">
                                 <label for="category_name">اسم القسم</label>

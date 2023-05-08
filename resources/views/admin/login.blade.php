@@ -28,7 +28,7 @@
                                             <h2>مرحبا بك</h2>
                                             <h5 class="font-weight-semibold mb-4"> تسجيل الدخول</h5>
                                             <form method="GET" action="{{ route('index') }}">
-                                                @csrf
+{{--                                                @csrf--}}
                                                 <div class="form-group">
                                                     <label for="email">البريد الالكتروني</label>
                                                     <input id="email" type="email"
