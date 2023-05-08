@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/{page}',function ($id){
     if(view()->exists($id))
@@ -24,5 +24,3 @@ Route::get('/{page}',function ($id){
     else
         return view('404');
 });
-
-Route::get('index1',[Controller::class,'index'])->name('index1');

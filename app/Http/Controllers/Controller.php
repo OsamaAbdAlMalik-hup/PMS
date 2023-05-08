@@ -11,7 +11,4 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function index(){
-        return redirect()->to('chart-flot');
-    }
 }
