@@ -15,12 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name('index');
+    return view('admin.login');
+})->name('admin.auth');
 
-Route::get('/{page}',function ($id){
-    if(view()->exists($id))
-        return view($id);
-    else
-        return view('404');
-});
