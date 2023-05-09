@@ -19,10 +19,10 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-header pb-0">
-                <p class="tx-26 tx-gray-500 mb-2">الأقسام</p>
+                <p class="tx-26 tx-gray-500 mb-2">شركات التأمين</p>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a class="btn ripple btn-primary" data-target="#modalCreate" data-toggle="modal" href="">إضافة قسم</a>
+                <a class="btn ripple btn-primary" data-target="#modalCreate" data-toggle="modal" href="">إضافة شركة</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive hoverable-table">
@@ -30,7 +30,7 @@
                         <thead>
                         <tr>
                             <th>الاسم</th>
-                            <th>الصورة</th>
+                            <th>الشعار</th>
                             <th>العمليات</th>
                         </tr>
                         </thead>
@@ -77,7 +77,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">أصافة قسم</h6>
+                    <h6 class="modal-title">أصافة شركة تأمين</h6>
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
@@ -85,14 +85,14 @@
                     <form action="{{ route('index') }}" method="get">
                         <div class="">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">اسم القسم</label>
+                                <label for="exampleInputEmail1">اسم الشركة</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
                                        placeholder="أدخل الاسم">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <label for="exampleInputEmail1">صورة القسم</label>
+                                <label for="exampleInputEmail1">صورة الشركة</label>
                             </div>
                             <div class="col-sm-16">
                                 <input type="file" class="dropify" data-height="200"/>
@@ -113,7 +113,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">تعديل قسم</h6>
+                    <h6 class="modal-title">تعديل شركة تأمين</h6>
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
@@ -121,7 +121,7 @@
                     <form action="{{ route('index') }}" method="get">
                         <div class="">
                             <div class="form-group">
-                                <label for="category_name">اسم القسم</label>
+                                <label for="category_name">اسم الشركة</label>
                                 <input type="text" class="form-control" id="category_name"
                                        placeholder="أدخل الاسم">
                                 <input type="hidden" class="form-control" id="category_id">
@@ -129,7 +129,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <label for="exampleInputEmail1">صورة القسم</label>
+                                <label for="exampleInputEmail1">شعار الشركة</label>
                             </div>
                             <div class="col-sm-16">
                                 <input type="file" class="dropify" data-height="200"/>
@@ -150,10 +150,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف قسم</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                    <h6 class="modal-title">حذف شركة</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <p class="font-weight-bold">هل أنت متأكد من عملية حذف هذا القسم</p>
+                    <p class="font-weight-bold">هل أنت متأكد من عملية حذف هذا الشركة</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn ripple btn-danger" type="button">تاكيد</button>
