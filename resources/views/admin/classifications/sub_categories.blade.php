@@ -33,11 +33,12 @@
                 <a class="btn ripple btn-primary" data-target="#modalCreate" data-toggle="modal" href="">إضافة قسم</a>
             </div>
             <div class="card-body">
-                <div class="table-center table-bordered">
+                <div class="table-responsive border-0">
                     <table id="example-delete" class="table text-md-nowrap">
                         <thead>
                         <tr>
-                            <th>الاسم</th>
+                            <th>الاسم بالعربية</th>
+                            <th>الاسم بالانكليزية</th>
                             <th>القسم الرئيسي</th>
                             <th>الصورة</th>
                             <th>العمليات</th>
@@ -45,6 +46,7 @@
                         </thead>
                         <tbody>
                         <tr data-item-id="1" data-item-name="Product A">
+                            <td>اي اسم</td>
                             <td>Tiger Nixon</td>
                             <td>Tiger</td>
                             <td>
@@ -78,14 +80,20 @@
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('index') }}" method="get">
-                        <div class="">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">اسم القسم الفرعي</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                       placeholder="أدخل الاسم">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">اسم القسم الفرعي</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالعربية">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالانكليزية">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-9">
+                            <div class="form-group">
                             <label for="main_category_select" class="mg-b-10">اختر القسم الرئيسي</label>
                             <select id="main_category_select" class="form-control select2-results">
                                 <option>
@@ -102,12 +110,9 @@
                                 </option>
                             </select>
                         </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="exampleInputEmail1">صورة القسم الفرعي</label>
-                            </div>
-                            <div class="col-sm-16">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">صورة القسم الفرعي</label>
+                            <div class="col-8">
                                 <input type="file" class="dropify" data-height="200"/>
                             </div>
                         </div>
@@ -132,15 +137,20 @@
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('index') }}" method="get">
-                        <div class="">
-                            <div class="form-group">
-                                <label for="category_name">اسم القسم الفرعي</label>
-                                <input type="text" class="form-control" id="category_name"
-                                       placeholder="أدخل الاسم">
-                                <input type="hidden" class="form-control" id="category_id">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">اسم القسم الفرعي</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالعربية">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالانكليزية">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="form-group">
                             <label for="main_category_select" class="mg-b-10">اختر القسم الرئيسي</label>
                             <select id="main_category_select" class="form-control select2-results">
                                 <option>
@@ -157,12 +167,9 @@
                                 </option>
                             </select>
                         </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="exampleInputEmail1">صورة القسم الفرعي</label>
-                            </div>
-                            <div class="col-sm-16">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">صورة القسم الفرعي</label>
+                            <div class="col-8">
                                 <input type="file" class="dropify" data-height="200"/>
                             </div>
                         </div>

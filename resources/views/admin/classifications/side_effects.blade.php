@@ -19,28 +19,25 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-header pb-0">
-                <p class="tx-26 tx-gray-500 mb-2">شركات التأمين</p>
+                <p class="tx-40 tx-primary-800 mb-4">التأثيرات الجانبة</p>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a class="btn ripple btn-primary" data-target="#modalCreate" data-toggle="modal" href="">إضافة شركة</a>
+                <a class="btn ripple btn-primary tx-16" data-target="#modalCreate" data-toggle="modal" href="">إضافة تأثير</a>
             </div>
             <div class="card-body">
-                <div class="table-responsive hoverable-table">
+                <div class="table-responsive table-bordered border-0">
                     <table id="example-delete" class="table text-md-nowrap">
                         <thead>
                         <tr>
-                            <th>الاسم</th>
-                            <th>الشعار</th>
+                            <th>الاسم بالعربية</th>
+                            <th>الاسم بالانكليزية</th>
                             <th>العمليات</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr data-item-id="1" data-item-name="Product A">
+                            <td>تاميكو</td>
                             <td>Tiger Nixon</td>
-                            <td>
-                                <img alt="Responsive image" class="img-thumbnail wd-sm-75"
-                                     src="http://127.0.0.1:8000/assets/img/photos/1.jpg">
-                            </td>
                             <td>
                                 <div class="btn-icon-list">
                                     <button class="btn btn-danger btn-icon" data-category_name="Osama" data-category_id="{{ 1 }}"
@@ -51,11 +48,8 @@
                             </td>
                         </tr>
                         <tr data-item-id="1" data-item-name="Product A">
+                            <td>تاميكو</td>
                             <td>Tiger Nixon</td>
-                            <td>
-                                <img alt="Responsive image" class="img-thumbnail wd-sm-75"
-                                     src="http://127.0.0.1:8000/assets/img/photos/1.jpg">
-                            </td>
                             <td>
                                 <div class="btn-icon-list">
                                     <button class="btn btn-danger btn-icon" data-category_name="Osama" data-category_id="{{ 1 }}"
@@ -77,25 +71,23 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">أصافة شركة تأمين</h6>
+                    <h6 class="modal-title">أصافة تأثير جانبي</h6>
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('index') }}" method="get">
-                        <div class="">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">اسم الشركة</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                       placeholder="أدخل الاسم">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="exampleInputEmail1">صورة الشركة</label>
-                            </div>
-                            <div class="col-sm-16">
-                                <input type="file" class="dropify" data-height="200"/>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">اسم التأثير</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالعربية">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالانكليزية">
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -113,26 +105,23 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">تعديل شركة تأمين</h6>
+                    <h6 class="modal-title">تعديل تأثير جانبي</h6>
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('index') }}" method="get">
-                        <div class="">
-                            <div class="form-group">
-                                <label for="category_name">اسم الشركة</label>
-                                <input type="text" class="form-control" id="category_name"
-                                       placeholder="أدخل الاسم">
-                                <input type="hidden" class="form-control" id="category_id">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="exampleInputEmail1">شعار الشركة</label>
-                            </div>
-                            <div class="col-sm-16">
-                                <input type="file" class="dropify" data-height="200"/>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">اسم التأثير</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالعربية">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالانكليزية">
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -150,10 +139,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف شركة</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                    <h6 class="modal-title">حذف تأثير جانبي</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <p class="font-weight-bold">هل أنت متأكد من عملية حذف هذا الشركة</p>
+                    <p class="font-weight-bold">هل أنت متأكد من عملية حذف هذا التأثير</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn ripple btn-danger" type="button">تاكيد</button>

@@ -19,60 +19,43 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-header pb-0">
-                <p class="tx-26 tx-gray-500 mb-2">شركات الأدوية</p>
+                <p class="tx-40 tx-primary-800 mb-4">طرق التخزين</p>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a class="btn ripple btn-primary" data-target="#modalCreate" data-toggle="modal" href="">إضافة شركة</a>
+                <a class="btn ripple btn-primary tx-16" data-target="#modalCreate" data-toggle="modal" href="">إضافة طريقة</a>
             </div>
             <div class="card-body">
-                <div class="table-responsive border-0">
+                <div class="table-responsive table-bordered border-0">
                     <table id="example-delete" class="table text-md-nowrap">
                         <thead>
                         <tr>
                             <th>الاسم بالعربية</th>
                             <th>الاسم بالانكليزية</th>
-                            <th>الشعار</th>
                             <th>العمليات</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr data-item-id="1" data-item-name="Product A">
                             <td>تاميكو</td>
                             <td>Tiger Nixon</td>
                             <td>
-                                <img alt="Responsive image" class="img-thumbnail wd-sm-75"
-                                     src="http://127.0.0.1:8000/assets/img/photos/1.jpg">
-                            </td>
-                            <td>
                                 <div class="btn-icon-list">
-                                    <button class="btn btn-danger btn-icon" data-category_name="Osama"
-                                            data-category_id="{{ 1 }}"
-                                            data-toggle="modal" data-target="#modalDelete"><i
-                                            class="mdi mdi-delete"></i></button>
-                                    <button class="btn btn-info btn-icon" data-category_name="Osama"
-                                            data-category_id="{{ 1 }}"
-                                            data-toggle="modal" data-target="#modalUpdate"><i
-                                            class="zmdi zmdi-edit"></i></button>
+                                    <button class="btn btn-danger btn-icon" data-category_name="Osama" data-category_id="{{ 1 }}"
+                                            data-toggle="modal" data-target="#modalDelete"><i class="mdi mdi-delete"></i></button>
+                                    <button class="btn btn-info btn-icon" data-category_name="Osama" data-category_id="{{ 1 }}"
+                                            data-toggle="modal" data-target="#modalUpdate"><i class="zmdi zmdi-edit"></i></button>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr data-item-id="1" data-item-name="Product A">
                             <td>تاميكو</td>
                             <td>Tiger Nixon</td>
                             <td>
-                                <img alt="Responsive image" class="img-thumbnail wd-sm-75"
-                                     src="http://127.0.0.1:8000/assets/img/photos/1.jpg">
-                            </td>
-                            <td>
                                 <div class="btn-icon-list">
-                                    <button class="btn btn-danger btn-icon" data-category_name="Osama"
-                                            data-category_id="{{ 1 }}"
-                                            data-toggle="modal" data-target="#modalDelete"><i
-                                            class="mdi mdi-delete"></i></button>
-                                    <button class="btn btn-info btn-icon" data-category_name="Osama"
-                                            data-category_id="{{ 1 }}"
-                                            data-toggle="modal" data-target="#modalUpdate"><i
-                                            class="zmdi zmdi-edit"></i></button>
+                                    <button class="btn btn-danger btn-icon" data-category_name="Osama" data-category_id="{{ 1 }}"
+                                            data-toggle="modal" data-target="#modalDelete"><i class="mdi mdi-delete"></i></button>
+                                    <button class="btn btn-info btn-icon" data-category_name="Osama" data-category_id="{{ 1 }}"
+                                            data-toggle="modal" data-target="#modalUpdate"><i class="zmdi zmdi-edit"></i></button>
                                 </div>
                             </td>
                         </tr>
@@ -88,14 +71,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">أصافة شركة أدوية</h6>
+                    <h6 class="modal-title">أصافة طريقة تخزين</h6>
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('index') }}" method="get">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">اسم الشركة</label>
+                            <label for="exampleInputEmail1">اسم الطريقة</label>
                             <div class="row">
                                 <div class="col-6">
                                     <input type="email" class="form-control" id="exampleInputEmail1"
@@ -105,12 +88,6 @@
                                     <input type="email" class="form-control" id="exampleInputEmail1"
                                            placeholder="أدخل الاسم بالانكليزية">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">شعار الشركة</label>
-                            <div class="col-8">
-                                <input type="file" class="dropify" data-height="200"/>
                             </div>
                         </div>
                     </form>
@@ -128,28 +105,23 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">تعديل شركة أدوية</h6>
+                    <h6 class="modal-title">تعديل طريقة تخزين</h6>
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('index') }}" method="get">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="exampleInputEmail1">اسم الشركة بالعربية</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                       placeholder="أدخل الاسم بالعربية">
-                            </div>
-                            <div class="col-6">
-                                <label for="exampleInputEmail1">اسم الشركة بالانكليزية</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                       placeholder="أدخل الاسم بالانكليزية">
-                            </div>
-                        </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">شعار الشركة</label>
-                            <div class="col-8">
-                                <input type="file" class="dropify" data-height="200"/>
+                            <label for="exampleInputEmail1">اسم الطريقة</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالعربية">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="أدخل الاسم بالانكليزية">
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -167,12 +139,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف شركة</h6>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-                            aria-hidden="true">&times;</span></button>
+                    <h6 class="modal-title">حذف طريقة تخزين</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <p class="font-weight-bold">هل أنت متأكد من عملية حذف هذا الشركة</p>
+                    <p class="font-weight-bold">هل أنت متأكد من عملية حذف هذا الطريقة</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn ripple btn-danger" type="button">تاكيد</button>
@@ -208,7 +178,7 @@
     <script src="{{asset('assets/plugins/fileuploads/js/file-upload.js')}}"></script>
 
     <script>
-        $('#modalUpdate').on('show.bs.modal', function (event) {
+        $('#modalUpdate').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget)
             var category_id = button.data('category_id')
             var category_name = button.data('category_name')
