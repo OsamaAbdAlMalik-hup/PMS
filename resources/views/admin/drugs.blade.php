@@ -21,6 +21,11 @@
             <div class="card-header pb-0">
                 <p class="tx-26 tx-gray-500 mb-2">الأدوية</p>
             </div>
+            <div class="col-sm-7 col-md-6 col-lg-4">
+                <div class="custom-file">
+                    <input class="custom-file-input" id="customFile" type="file"> <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+            </div>
             <div class="col-sm-4 col-md-4">
                 <a class="btn ripple btn-primary" data-target="#modalCreate" data-toggle="modal" href="">إضافة دواء</a>
             </div>

@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,14 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::controller(AdminController::class)->group(function () {
-    Route::middleware('guest:admin')->group(function (){
-        Route::get('/login','getLogin')->name('admin.showlogin');
-        Route::post('/login','login')->name('admin.login');
+Route::controller(LoginController::class)->group(function () {
+    Route::middleware('guest:admin')->group(function () {
+        Route::get('/login', 'getLogin')->name('admin.showlogin');
+        Route::post('/login', 'login')->name('admin.login');
     });
-    Route::middleware('auth:admin')->group(function (){
-        Route::get('/','show_dashboard')->name('index');
-        Route::get('/logout','logout')->name('admin.logout');
-        Route::get('/{page}','get_page');
-    });
+});
+
+Route::controller(HomeController::class)->
+middleware('auth:admin')->group(function () {
+    Route::get('/', 'show_dashboard')->name('index');
+    Route::get('/logout', 'logout')->name('admin.logout');
+    Route::get('/{page}', 'get_page');
+    Route::post('import-excel', 'import')->name('admin.import');
 });
